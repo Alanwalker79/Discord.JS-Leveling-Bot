@@ -11,11 +11,11 @@ client.commands = new Discord.Collection();
 const cooldowns = new Discord.Collection();
 const talkedRecently = new Map();
 
-// Token, Prefix, and Owner ID
+// Prefix, and Owner ID
 const config = require("./config.json")
 
 // Events
-client.login(config.token) 
+client.login(process.env.token) 
 
 client.on("ready", () => {
   // Check if the table "points" exists.
